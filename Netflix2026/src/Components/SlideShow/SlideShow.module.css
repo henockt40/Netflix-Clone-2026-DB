@@ -1,0 +1,70 @@
+.title {
+  color: white;
+  margin: 0 0 10px;
+}
+
+/* Keeps the carousel inside the page without clipping the preview vertically. */
+.Row {
+  position: relative;
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+/* Extra height gives an enlarged card room without moving the next row. */
+.Row :global(.swiper) {
+  height: 270px;
+  /* Reserve equal space for the left and right arrow areas. */
+  padding: 0 58px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.Row :global(.swiper-slide) {
+  display: flex;
+  align-items: center;
+  width: 227px;
+  height: 100%;
+  overflow: visible;
+}
+
+/* The track itself remains flush; the carousel padding creates both edge gaps. */
+.Row :global(.swiper-wrapper) {
+  padding: 0;
+}
+
+/* Navigation buttons base style */
+.Row :global(.swiper-button-prev),
+.Row :global(.swiper-button-next) {
+  background: transparent !important;
+  color: white !important;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  top: 50%;
+  transform: translateY(-70%);
+}
+
+.Row :global(.swiper-button-prev) { left: 12px; }
+.Row :global(.swiper-button-next) { right: 12px; }
+
+/* Smaller arrow icon */
+.Row :global(.swiper-button-prev::after),
+.Row :global(.swiper-button-next::after) {
+  font-size: 14px !important;
+}
+
+/* Show on hover */
+.Row:hover :global(.swiper-button-prev),
+.Row:hover :global(.swiper-button-next) {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Keep the desktop composition while adapting the original cards to narrow screens. */
+@media (max-width: 767px) {
+  .Row :global(.swiper) { padding: 0 12px; height: 240px; }
+  .Row :global(.swiper-slide) { width: auto; }
+}
+@media (max-width: 479px) {
+  .Row :global(.swiper) { padding: 0 12px; }
+}

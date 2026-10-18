@@ -1,0 +1,96 @@
+.notificationRoot {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 16px;
+  height: 16px;
+  padding: 0 3px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #e50914;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.panel {
+  position: absolute;
+  z-index: 1100;
+  top: calc(100% + 15px);
+  right: -46px;
+  width: min(370px, calc(100vw - 24px));
+  color: #f5f5f1;
+  background: rgba(18, 18, 18, 0.98);
+  border: 1px solid #444;
+  border-radius: 5px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 6px;
+  font-size: 16px;
+}
+
+.closeButton, .actionButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #f5f5f1;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.closeButton { padding: 4px; }
+.closeButton:hover, .actionButton:hover { color: #fff; text-decoration: underline; }
+.actionButton:disabled { cursor: default; opacity: .45; text-decoration: none; }
+.subtitle { color: #aaa; font-size: 12px; margin: 0; padding: 0 16px 12px; }
+.feedback { color: #ccc; font-size: 13px; padding: 10px 16px 18px; margin: 0; }
+.feedback p { margin: 0 0 12px; }
+.alertList { list-style: none; padding: 0; margin: 0; max-height: 380px; overflow-y: auto; }
+.alertList li + li { border-top: 1px solid #333; }
+.alertButton {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 14px;
+  text-align: left;
+  cursor: pointer;
+}
+.alertButton:hover, .alertButton:focus-visible { background: #303030; }
+.poster, .posterPlaceholder { width: 43px; height: 63px; flex-shrink: 0; object-fit: cover; border-radius: 3px; }
+.posterPlaceholder { background: #393939; }
+.alertText { display: flex; flex-direction: column; gap: 5px; min-width: 0; flex: 1; }
+.alertText strong { font-size: 13px; font-weight: 600; overflow-wrap: anywhere; }
+.alertText small { color: #b3b3b3; font-size: 11px; }
+.unreadDot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; background: #e50914; }
+.panelFooter {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 16px;
+  border-top: 1px solid #333;
+  gap: 12px;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .panel { right: -56px; }
+}

@@ -1,0 +1,56 @@
+/* New styles apply only to the auth page. Original homepage CSS remains untouched. */
+.page {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.8)), url('../assets/image/login.jpg') center / cover no-repeat;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.top { padding: 26px clamp(18px, 5vw, 70px); }
+.top img { width: 135px; max-width: 45vw; }
+.panel {
+  background: rgba(0,0,0,.82);
+  width: min(100% - 32px, 420px);
+  margin: 28px auto 70px;
+  padding: clamp(24px, 5vw, 52px);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.panel h1 { font-size: 32px; font-weight: 700; margin: 0 0 26px; }
+.panel form { display: flex; flex-direction: column; gap: 16px; }
+.panel label { color: #ddd; font-size: 13px; display: flex; flex-direction: column; gap: 6px; }
+.panel input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #666;
+  border-radius: 4px;
+  font: inherit;
+  font-size: 16px;
+  background: #212121;
+  color: #fff;
+}
+.panel input:focus { outline: 2px solid #eee; outline-offset: 1px; }
+.submit {
+  margin-top: 10px;
+  padding: 14px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background: #e50914;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+}
+.submit:disabled { opacity: .65; cursor: wait; }
+.error { background: #5b1d1d; color: #fff; padding: 10px; font-size: 14px; border-radius: 3px; margin: 0; }
+.hint { color: #aaa; margin: 24px 0 0; }
+.switch { border: none; background: none; color: white; cursor: pointer; padding: 0; font-size: inherit; font-weight: 700; }
+.switch:hover { text-decoration: underline; }
+.note { color: #aaa; font-size: 12px; margin-top: 20px; }
+@media (max-width: 600px) {
+  .page { background: #000; }
+  .top { padding: 20px; }
+  .panel { margin: 8px auto 30px; padding: 22px; }
+}

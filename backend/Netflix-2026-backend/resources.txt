@@ -1,0 +1,17 @@
+Netflix Clone 2026 – course-style backend folders
+Auth/requireAuth.js     JWT authorization middleware
+Auth/validation.js      Registration/login input checks
+controllers/UserC.js    Sign up, sign in, signed-in user
+controllers/MovieC.js   Reserved only – movies still requested by React
+Routes/UserRoutes.js    POST register, POST login, GET me
+db/db.js           MySQL connection pool
+db/schema.sql      Run in MySQL Workbench 8.0
+AllRoutes.js           /api/health and /api/auth routes
+app.js                 Express server startup
+API URL                http://localhost:3777/api/health
+
+services/UserService.js       MySQL user data access
+services/TmdbService.js       TMDB candidate movie search
+services/GeminiService.js     Optional Gemini AI movie ranking
+services/RecommendationService.js  Recommendation orchestration & fallback
+Routes/AiRoutes.js          Authenticated recommendation endpoint

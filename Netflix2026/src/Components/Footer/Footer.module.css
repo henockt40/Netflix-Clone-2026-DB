@@ -1,0 +1,59 @@
+.footer {
+  background: #141414;
+  color: #808080;
+  padding: 62px 24px 18px;
+}
+
+.content {
+  width: min(940px, 100%);
+  margin: 0 auto;
+}
+
+/* The icons sit above the four link columns, as in the supplied design. */
+.socialLinks {
+  display: flex;
+  gap: 26px;
+  margin-bottom: 20px;
+}
+
+.socialLinks a {
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.linkGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 44px;
+}
+
+.linkColumn {
+  display: grid;
+  gap: 16px;
+}
+
+.linkColumn a {
+  color: #808080;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.linkColumn a:hover,
+.socialLinks a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.copyright {
+  margin: 28px 0 0;
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  /* Two columns keep the footer readable on a narrow screen. */
+  .linkGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}

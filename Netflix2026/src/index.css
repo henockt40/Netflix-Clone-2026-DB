@@ -1,0 +1,7 @@
+/* Hover previews may extend beyond a slide, but never create page-wide scrolling. */
+html,
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #000;
+}
